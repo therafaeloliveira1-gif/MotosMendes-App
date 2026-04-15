@@ -1,0 +1,12 @@
+{
+  "catalog": {
+    "version": "1.0.0",
+    "url": "https://raw.githubusercontent.com/therafaeloliveira1-gif/MotosMendes-App/main/updates/catalog_v2.mmupdate",
+    "description": "Base de datos inicial v2.0"
+  },
+  "app": {
+    "versionName": "2.0.0",
+    "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/raw/main/updates/MotosMendes_v2.0.0.apk",
+    "description": "Nueva versión 2.0 con sistema de actualización inteligente."
+  }
+}
