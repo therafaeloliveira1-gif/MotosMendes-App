@@ -1,4 +1,8 @@
-{
+/**
+ * AUTO-GENERATED IMAGE MAP
+ * Generado el: 5/5/2026, 1:52:43 p. m.
+ */
+export const imageMap = {
   "1000": "/images/1000- ESTATOR-12-BOBINAS-MOTOCARRO.webp",
   "1001": "/images/1001-ESTATOR-6-BOBINAS-SK-110,-MOTONETA.webp",
   "1002": "/images/1002-ESTATOR-8-BOBINAS-MD-125,-GYR-150.webp",
@@ -3193,4 +3197,4 @@
   "49004": "/images/49004-MANOPLA-MODELO-ORIGINAL-TITAN-99.webp",
   "49005": "/images/49005-TENSOR-CADENA-CG-125.webp",
   "50000": "/images/50000-FILTRO CUMBUSTIBLE UNI copia.webp"
-}
+};

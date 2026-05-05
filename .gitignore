@@ -10,6 +10,7 @@ node_modules/
 
 # Pero NO ignorar las carpetas importantes para el catálogo
 !public/
+public/images.zip
 !scripts/
 !updates/
 !version.json
