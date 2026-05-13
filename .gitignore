@@ -1,0 +1,23 @@
+# Ignorar todo por defecto
+/*
+
+# Excepto estos archivos clave
+!.gitignore
+!update.mmupdate
+!version.json
+!scripts/
+!scripts/upload-github.js
+!package.json
+!SUBIR_TODO.bat
+!SUBIR_APK_LIVIANO.bat
+!SUBIR_APK_COMPLETO.bat
+!SUBIR_SOLO_CATALOGO.bat
+
+# Archivos sensibles y carpetas de build
+.env
+node_modules/
+dist/
+android/
+ios/
+.gradle/
+.idea/
