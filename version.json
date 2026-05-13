@@ -1,7 +1,12 @@
 {
   "catalog": {
-    "version": "2026.0513.0758",
+    "version": "2026.0513.0801",
     "url": "https://raw.githubusercontent.com/therafaeloliveira1-gif/MotosMendes-App/main/update.mmupdate",
-    "generatedAt": "2026-05-13T10:58:08.619Z"
+    "generatedAt": "2026-05-13T11:01:05.183Z"
+  },
+  "app": {
+    "versionName": "2.0.1",
+    "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/releases/latest/download/MotosMendes_v2.0.1_FULL.apk",
+    "notes": "Nueva versión de la aplicación con mejoras de rendimiento y catálogo actualizado."
   }
 }
