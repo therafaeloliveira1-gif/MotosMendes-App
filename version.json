@@ -1,20 +1,7 @@
 {
   "catalog": {
-<<<<<<< HEAD
-    "version": "2026.0512.1702",
+    "version": "2026.0513.0728",
     "url": "https://raw.githubusercontent.com/therafaeloliveira1-gif/MotosMendes-App/main/update.mmupdate",
-    "generatedAt": "2026-05-12T20:02:18.292Z"
+    "generatedAt": "2026-05-13T10:28:48.029Z"
   }
 }
-=======
-    "version": "2.0.7",
-    "url": "https://raw.githubusercontent.com/therafaeloliveira1-gif/MotosMendes-App/main/updates/catalog_v2.mmupdate",
-    "description": "Base de datos inicial v2.0"
-  },
-  "app": {
-    "versionName": "2.0.0",
-    "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/releases/download/v2.0.0/MotosMendes_v2.0.0_UPDATE.apk",
-    "changelog": "Versión ligera. Descarga rápida asegurada."
-  }
-}
->>>>>>> a8e0c411acbb78b144a5fb7dc69c4e5df959759f
