@@ -1,8 +1,8 @@
 {
   "catalog": {
-    "version": "2026.0513.1615",
+    "version": "2026.0514.1031",
     "url": "https://raw.githubusercontent.com/therafaeloliveira1-gif/MotosMendes-App/main/update.mmupdate",
-    "generatedAt": "2026-05-13T19:15:11.837Z"
+    "generatedAt": "2026-05-14T13:31:53.293Z"
   },
   "appFull": {
     "versionName": "2.1.4",
@@ -10,8 +10,8 @@
     "notes": "Versión completa con todas las imágenes incluidas (450MB+)."
   },
   "appUpdate": {
-    "versionName": "2.1.6",
-    "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/releases/latest/download/MotosMendes_v2.1.6_UPDATE.apk",
+    "versionName": "2.1.7",
+    "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/releases/latest/download/MotosMendes_v2.1.7_UPDATE.apk",
     "notes": "Actualización ligera. Las imágenes se descargarán a demanda (3MB)."
   }
 }
