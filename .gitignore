@@ -12,6 +12,13 @@
 !SUBIR_APK_LIVIANO.bat
 !SUBIR_APK_COMPLETO.bat
 !SUBIR_SOLO_CATALOGO.bat
+!SUBIR_SOLO_IMAGENES.bat
+
+# Permitir imágenes del catálogo
+!public/
+public/*
+!public/images/
+!public/thumbnails/
 
 # Archivos sensibles y carpetas de build
 .env
