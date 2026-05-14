@@ -40,6 +40,20 @@ function generateVersion() {
 }
 
 /**
+ * Ejecuta un comando de consola de forma síncrona y loguea la salida
+ */
+function runCommand(command) {
+    const cmdForLog = command.replace(CONFIG.token, '***');
+    console.log(`\n⌨️ Ejecutando: ${cmdForLog}`);
+    try {
+        execSync(command, { stdio: 'inherit' });
+        return true;
+    } catch (e) {
+        throw new Error(`Fallo el comando: ${cmdForLog}`);
+    }
+}
+
+/**
  * Sube un archivo pesado a GitHub Releases
  */
 async function uploadReleaseAsset(tagName, filePath, fileName) {
@@ -192,9 +206,21 @@ async function run() {
 
             if (isFull) {
                 versionData.appFull = appInfo;
+                // Sincronizar versión con la variante ligera si ya existe para evitar puntos ciegos
+                if (versionData.appUpdate && versionData.appUpdate.versionName) {
+                    versionData.appUpdate.versionName = APP_VERSION;
+                }
             } else {
                 versionData.appUpdate = appInfo;
+                // Sincronizar versión con la variante completa si ya existe
+                if (versionData.appFull && versionData.appFull.versionName) {
+                    versionData.appFull.versionName = APP_VERSION;
+                }
             }
+
+            // [COMPATIBILIDAD] Mantener el campo 'app' viejo para que las versiones antiguas (2.1.1) 
+            // puedan ver la actualización y saltar a la nueva estructura.
+            versionData.app = appInfo;
 
             // SUBIDA AUTOMÁTICA DEL APK
             await uploadReleaseAsset(`v${APP_VERSION}`, apkPath, apkName);
@@ -203,34 +229,34 @@ async function run() {
         fs.writeFileSync(PATHS.versionFile, JSON.stringify(versionData, null, 2));
         console.log(`✅ Archivo ${PATHS.versionFile} actualizado (Variante: ${MODE}).`);
 
-        // 3. Subir a GitHub usando Git (Metadata y Catálogo)
-        console.log('📡 Sincronizando metadatos con GitHub...');
+        // --- SINCRONIZACIÓN CON GITHUB ---
+        console.log(`\n🚀 Iniciando despliegue a GitHub...`);
         
-        // Configurar URL con token para subida sin contraseña
-        const remoteUrl = `https://${CONFIG.token}@github.com/${CONFIG.username}/${CONFIG.repo}.git`;
-        
-        const commands = [
-            `git add ${PATHS.updateFile} ${PATHS.versionFile}`,
-            `git commit -m "Auto-update: ${newVersion} [${MODE}]"`,
-            `git pull ${remoteUrl} ${CONFIG.branch} --rebase`,
-            `git push ${remoteUrl} ${CONFIG.branch}`
-        ];
-
-        for (const cmd of commands) {
+        try {
+            // 1. Asegurar que todo esté guardado localmente antes de pull
+            runCommand('git add .');
+            
+            // Intentar commit (puede fallar si no hay cambios, por eso el try/catch interno)
             try {
-                console.log(`\n⌨️ Ejecutando: ${cmd.replace(CONFIG.token, '***')}`);
-                execSync(cmd, { stdio: 'inherit' });
+                runCommand(`git commit -m "Auto-update: ${newVersion} [${MODE}]"`);
             } catch (e) {
-                console.warn(`\n⚠️ ERROR EN COMANDO GIT: El comando fallo. Esto puede evitar que el version.json se actualice en GitHub.`);
-                console.warn(`   Detalle: ${e.message}`);
-                // Si falla el push, lanzamos error real para que el usuario lo vea
-                if (cmd.includes('push')) throw new Error("No se pudo subir el version.json a GitHub. Verifique su conexion y permisos de Git.");
+                console.log("ℹ️ No hay cambios nuevos para comitear.");
             }
+
+            // 2. Traer cambios remotos con rebase (ahora sin errores de 'unstaged')
+            console.log(`\n📥 Sincronizando con repositorio remoto...`);
+            runCommand(`git pull https://${CONFIG.token}@github.com/${CONFIG.username}/${CONFIG.repo}.git main --rebase`);
+
+            // 3. Subir cambios definitivos
+            console.log(`\n📤 Subiendo a GitHub...`);
+            runCommand(`git push https://${CONFIG.token}@github.com/${CONFIG.username}/${CONFIG.repo}.git main`);
+            
+            console.log(`\n✨ ¡DESPLIEGUE COMPLETADO EXITOSAMENTE! ✨`);
+            console.log(`📱 Los teléfonos recibirán la versión ${newVersion} en unos minutos.`);
+        } catch (error) {
+            console.error('\n❌ ERROR DURANTE EL DESPLIEGUE:', error.message);
+            process.exit(1);
         }
-
-        console.log('\n✨ ¡DESPLIEGUE COMPLETADO EXITOSAMENTE! ✨');
-        console.log(`📱 Los teléfonos recibirán la versión ${newVersion} en unos minutos.`);
-
     } catch (err) {
         console.error('\n❌ ERROR DURANTE EL DESPLIEGUE:', err.message);
         process.exit(1);

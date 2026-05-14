@@ -1,7 +1,7 @@
 {
     "name":  "motos-mendes-catalog-v2.0",
     "private":  true,
-    "version":  "2.1.4",
+    "version":  "2.1.7",
     "type":  "module",
     "scripts":  {
                     "dev":  "vite --host --port 5171",
