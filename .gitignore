@@ -5,14 +5,6 @@
 !.gitignore
 !update.mmupdate
 !version.json
-!scripts/
-!scripts/upload-github.js
-!package.json
-!SUBIR_TODO.bat
-!SUBIR_APK_LIVIANO.bat
-!SUBIR_APK_COMPLETO.bat
-!SUBIR_SOLO_CATALOGO.bat
-!SUBIR_SOLO_IMAGENES.bat
 
 # Permitir imágenes del catálogo
 !public/
