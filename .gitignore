@@ -1,16 +1,29 @@
-# Ignorar archivos pesados que bloquean la subida a GitHub (excepto actualizaciones)
-FB_DATA/
-manager/
-manager-v2/
-node_modules/
-*.exe
-*.FDB
-*.db
-# *.xlsx  <-- Los dejamos fuera por ahora o los incluimos si prefieres
+# Ignorar absolutamente todo por defecto
+/*
 
-# Pero NO ignorar las carpetas importantes para el catálogo
+# Excepciones - Permitir únicamente la carpeta public y sus subcarpetas
 !public/
-!scripts/
-!updates/
-!version.json
-!ultima-actualizacion.json
+public/*
+!public/images/
+!public/thumbnails/
+!public/brands/
+!public/data/
+
+# Permitir archivos de configuración git obligatorios
+!.gitignore
+!package.json
+!package-lock.json
+
+# Bloquear archivos sensibles y temporales
+.env
+node_modules/
+~$*
+*.tmp
+*.xlsx
+*.csv
+*.FDB
+FB_DATA/
+scripts/
+updates/
+version.json
+ultima-actualizacion.json
