@@ -9,10 +9,12 @@ public/*
 !public/brands/
 !public/data/
 
-# Permitir archivos de configuración git obligatorios
+# Permitir archivos de configuración git obligatorios y metadatos del catálogo
 !.gitignore
 !package.json
 !package-lock.json
+!update.mmupdate
+!version.json
 
 # Bloquear archivos sensibles y temporales
 .env
@@ -25,5 +27,5 @@ node_modules/
 FB_DATA/
 scripts/
 updates/
-version.json
 ultima-actualizacion.json
+
