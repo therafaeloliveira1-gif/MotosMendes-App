@@ -1,6 +1,7 @@
 {
   "catalog": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "version": "24.08.26.0917",
     "url": "https://raw.githubusercontent.com/therafaeloliveira1-gif/MotosMendes-App/main/update.mmupdate",
     "generatedAt": "2026-08-24T12:17:44.931Z"
@@ -4092,6 +4093,11 @@
       "61002": "/images/61002-ACEITE-GP-SEMI-SINTÉTICO-SL-10W-30.webp",
       "61003": "/images/61003-ACEITE-SUSPENSION-FORK-10W-12X1.webp"
     }
+>>>>>>> Stashed changes
+=======
+    "version": "26.08.26.1106",
+    "url": "https://raw.githubusercontent.com/therafaeloliveira1-gif/MotosMendes-App/main/update.mmupdate",
+    "generatedAt": "2026-08-26T14:06:37.231Z"
 >>>>>>> Stashed changes
   },
   "appFull": {
