@@ -1,16 +1,4 @@
 {
-  "3058": {
-    "valAntes": null,
-    "valPromo": 16350
-  },
-  "3059": {
-    "valAntes": null,
-    "valPromo": 17900
-  },
-  "3060": {
-    "valAntes": null,
-    "valPromo": 17800
-  },
   "15094": {
     "valAntes": null,
     "valPromo": 210000
@@ -1162,18 +1150,6 @@
   "15424": {
     "valAntes": null,
     "valPromo": 305000
-  },
-  "20001": {
-    "valAntes": null,
-    "valPromo": 15800
-  },
-  "20003": {
-    "valAntes": null,
-    "valPromo": 15800
-  },
-  "20004": {
-    "valAntes": null,
-    "valPromo": 18500
   },
   "39003": {
     "valAntes": 121688,
