@@ -1,18 +1,18 @@
 {
   "catalog": {
-    "version": "06.10.26.1310",
+    "version": "06.10.26.0757",
     "url": "https://raw.githubusercontent.com/therafaeloliveira1-gif/MotosMendes-App/main/update.mmupdate",
     "generatedAt": "2026-10-06T10:57:41.309Z"
   },
   "appFull": {},
   "appUpdate": {
-    "versionName": "2.6.7",
-    "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/releases/download/v2.6.7/MotosMendes_v2.6.7_UPDATE.apk",
-    "notes": "Actualización ligera. Las imágenes se descargarán a demanda (3MB)."
+    "versionName": "3.0.13",
+    "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/releases/download/v3.0.13/MotosMendes_v3.0.13_UPDATE.apk",
+    "notes": "¡Llegó la nueva versión 3.0! Catálogo ultra rápido, nuevo diseño,  y guia de uso."
   },
   "app": {
-    "versionName": "2.6.7",
-    "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/releases/download/v2.6.7/MotosMendes_v2.6.7_UPDATE.apk",
-    "notes": "Actualización ligera. Las imágenes se descargarán a demanda (3MB)."
+    "versionName": "3.0.13",
+    "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/releases/download/v3.0.13/MotosMendes_v3.0.13_UPDATE.apk",
+    "notes": "¡Llegó la nueva versión 3.0! Catálogo ultra rápido, nuevo diseño, nuevo diseño,  y guia de uso."
   }
 }
