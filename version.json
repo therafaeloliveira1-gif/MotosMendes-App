@@ -6,12 +6,12 @@
   },
   "appFull": {},
   "appUpdate": {
-    "versionName": "3.0.12",
+    "versionName": "2.6.7",
     "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/releases/download/v2.6.7/MotosMendes_v2.6.7_UPDATE.apk",
     "notes": "Actualización ligera. Las imágenes se descargarán a demanda (3MB)."
   },
   "app": {
-    "versionName": "3.0.12",
+    "versionName": "2.6.7",
     "url": "https://github.com/therafaeloliveira1-gif/MotosMendes-App/releases/download/v2.6.7/MotosMendes_v2.6.7_UPDATE.apk",
     "notes": "Actualización ligera. Las imágenes se descargarán a demanda (3MB)."
   }
